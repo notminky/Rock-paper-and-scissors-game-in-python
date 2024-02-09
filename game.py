@@ -29,6 +29,10 @@ def check_win(player,computer):
             return "you win"
         else:
             return "you lose"
-choices = get_choices()
-win = check_win(choices["player"], choices["computer"])
-print(win)
+while True:
+    choices = get_choices()
+    win = check_win(choices["player"], choices["computer"])
+    print(win)
+    play_again=input("do you wanna play again? (y,n)").lower()
+    if play_again!= "y":
+        break
